@@ -1,0 +1,13 @@
+<!-- Custom head content -->
+<link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
+<script>
+  // Check for saved theme preference or use preferred-color-scheme
+  const theme = localStorage.getItem('theme') || 
+    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  
+  // Apply the theme class as early as possible to prevent flashing
+  document.documentElement.classList.add(theme);
+  
+  // Store the theme preference
+  localStorage.setItem('theme', theme);
+</script>

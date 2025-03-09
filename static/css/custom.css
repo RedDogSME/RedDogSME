@@ -1,0 +1,114 @@
+/* Custom CSS for RedDogSME */
+
+/* Dark Mode Styling */
+html.dark {
+  --color-bg-primary: #121212;
+  --color-bg-secondary: #1e1e1e;
+  --color-text-primary: #e0e0e0;
+  --color-text-secondary: #b0b0b0;
+  --color-border: #333;
+  --color-accent: #3b82f6;
+  --color-link: #60a5fa;
+  --color-code-bg: #2d2d2d;
+}
+
+html.light {
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f3f4f6;
+  --color-text-primary: #111827;
+  --color-text-secondary: #4b5563;
+  --color-border: #e5e7eb;
+  --color-accent: #3b82f6;
+  --color-link: #2563eb;
+  --color-code-bg: #f3f4f6;
+}
+
+html.dark body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--color-bg-secondary);
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+  color: var(--color-text-primary);
+}
+
+/* Blog Card Styling */
+.blog-card {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.blog-card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Enhanced Hero Section */
+.hero-section {
+  padding: 6rem 0;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+/* Logo Styling */
+.site-logo {
+  height: 32px;
+  width: auto;
+}
+
+/* Fix for dark mode code blocks */
+html.dark pre {
+  background-color: var(--color-code-bg) !important;
+}
+
+/* Smooth transitions */
+body, a, button {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}

@@ -1,0 +1,11 @@
+<!-- Custom navbar content -->
+<div class="flex items-center gap-2">
+  <a href="{{ .Site.BaseURL }}" class="flex items-center gap-2">
+    <img src="{{ "images/logo.png" | relURL }}" alt="{{ .Site.Title }} Logo" class="site-logo">
+  </a>
+</div>
+
+<!-- Append the theme toggle to the navbar -->
+<div class="flex items-center">
+  {{ partial "theme-toggle.html" . }}
+</div>
